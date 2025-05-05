@@ -1,0 +1,211 @@
+/* ===============================
+   Contact Us Page - Enhanced CSS
+   =============================== */
+
+/* General Layout Enhancements */
+.contact-info {
+  padding: 4em 1em;
+  background: linear-gradient(135deg, #e0f7fa, #f8f9fa);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-info .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-details,
+.contact-form {
+  flex: 1 1 45%;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+/* Section Headers */
+.contact-details h3,
+.contact-form h3 {
+  font-size: 2.25em;
+  margin-bottom: 1em;
+  color: #004d40;
+  text-align: center;
+  position: relative;
+}
+
+.contact-details h3::after,
+.contact-form h3::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #00bfa5;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Text Styling */
+.contact-details p,
+.contact-form p {
+  font-size: 1.1em;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
+
+/* Contact Info Cards */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  background-color: #ffffff;
+  padding: 1.25em 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.info-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0) invert(1);
+  background-color: #00bfa5;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* Map Embed */
+.mapouter {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 2em;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gmap_canvas iframe {
+  width: 100% !important;
+  height: 400px !important;
+  border: none;
+}
+
+/* Contact Form Styling */
+.contact-form form {
+  background-color: #ffffff;
+  padding: 3em 2em;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00bfa5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 191, 165, 0.3);
+}
+
+.form-group input:invalid {
+  border-color: red;
+}
+
+.form-group input:valid {
+  border-color: green;
+}
+
+/* Submit Button */
+.contact-form button {
+  background-color: #00bfa5;
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin: 1em auto 0;
+}
+
+.contact-form button:hover {
+  background-color: #008e76;
+  transform: scale(1.05);
+}
+
+/* Form Message */
+#form-message {
+  margin-top: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+#form-message.success {
+  color: green;
+}
+
+#form-message.error {
+  color: red;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-info .container {
+    flex-direction: column;
+    padding: 0 1em;
+  }
+
+  .contact-details,
+  .contact-form {
+    flex: 1 1 100%;
+    margin-bottom: 2em;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-item img {
+    margin-bottom: 0.5em;
+  }
+
+  .contact-form form {
+    padding: 2em 1em;
+  }
+}
