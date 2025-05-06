@@ -23,7 +23,222 @@
     border-bottom: 1px solid #ddd;
     text-align: center;
   }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #F28C28;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 15px 10px;
+    vertical-align: top;
+}
+
+td:first-child {
+    width: 30%;
+    color: #333;
+    font-weight: 500;
+    background-color: #f9f9f9;
+}
+
+td:last-child {
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+    table, tr, td {
+        display: block;
+        width: 100%;
+    }
+    
+    td:first-child {
+        border-bottom: none;
+        padding-bottom: 5px;
+    }
+    
+    td:last-child {
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #F28C28;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 15px 10px;
+  vertical-align: top;
+}
+
+td:first-child {
+  width: 30%;
+  color: #333;
+  font-weight: 500;
+  background-color: #f9f9f9;
+}
+
+td:last-child {
+  width: 70%;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  table, tr, td {
+      display: block;
+      width: 100%;
+  }
   
+  td:first-child {
+      border-bottom: none;
+      padding-bottom: 5px;
+  }
+  
+  td:last-child {
+      padding-top: 5px;
+      padding-bottom: 15px;
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+h1 {
+    font-size: 36px;
+    color: #000;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.team-description {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.team-category {
+    font-size: 20px;
+    color: #555;
+    margin: 30px 0 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: #777;
+    font-size: 18px;
+}
+
+li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .team-description {
+        font-size: 15px;
+    }
+    
+    .team-category {
+        font-size: 18px;
+    }
+    
+    li {
+        font-size: 16px;
+    }
+}
   /* Navigation */
   nav ul {
     list-style: none;
@@ -172,11 +387,16 @@
 /* Service Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
 }
 
 .service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
   padding: 1.25em;
   border-radius: 12px;
@@ -204,19 +424,33 @@
   color: #004d40;
   font-size: 1.5em;
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .service-item p {
   color: #555;
   text-align: center;
-  font-size: 1em;
+  font-size: 16px;
 }
 
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* Company Info Grid */
 .company-info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
 }
 
 .info-item {
@@ -243,6 +477,28 @@
   background-color: #00bfa5;
   padding: 10px;
   border-radius: 50%;
+}
+
+.info-item h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .company-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .company-info-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* About Us Description */
